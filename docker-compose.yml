@@ -1,0 +1,9 @@
+services:
+  rust-util:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/
+    tty: true
+    stdin_open: true

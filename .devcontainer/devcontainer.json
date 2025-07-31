@@ -1,0 +1,35 @@
+{
+  "name": "Rust|lings Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "rust-util",
+  "workspaceFolder": "/usr/src/",
+  "remoteUser": "root",
+  "postCreateCommand": "rustup component add rustfmt clippy && cargo install rustlings && rustlings --version && rustlings init && rustlings",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "rust-analyzer.cargo.features": "all",
+        "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+        "rust-analyzer.checkOnSave.allTargets": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "rust-analyzer.cargo.buildScripts.rebuildOnSave": true
+      },
+      "extensions": [
+        "vadimcn.vscode-lldb",
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "usernamehw.errorlens",
+        "GitHub.github-vscode-theme",
+        "BarbossHack.crates-io",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "esbenp.prettier-vscode",
+        "emmanuelbeziat.vscode-great-icons",
+        "SeyyedKhandon.firacode",
+        "adpyke.codesnap"
+      ]
+    }
+  }
+}
