@@ -31,5 +31,8 @@
         "adpyke.codesnap"
       ]
     }
-  }
+  },
+  "mounts" : [
+	"source=${localWorkspaceFolder}/nvim,target=/root/.config/nvim,type=bind"
+	]
 }
